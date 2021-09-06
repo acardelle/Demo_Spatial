@@ -18,6 +18,7 @@ library(sf)
 library(tidyverse)
 library(ggspatial)
 library(ggthemes)
+library(raster)
 ```
 
 ## St_Read Tryout
@@ -26,18 +27,32 @@ library(ggthemes)
 
 wards <- st_read("wards_precincts.geojson")
 neighborhoods <- st_read("BOUNDARY_CDDNeighborhoods.shp.zip")
-libraries <- st_read("library_locations.xml")
 ```
+##libraries <- st_read("library_locations.xml")
+
 ## Including Plots
 
 You can also embed plots, for example:
 
 ```{r plotting test, echo=FALSE}
 
-neigh_plot <- ggplot(neighborhoods) +
-  geom_sf()
+cambridge_plot <- ggplot() +
+  geom_sf(data = wards, color = "blue") +
+  geom_sf(data = neighborhoods, color = "green", alpha = 0.5)
+  
 
-neigh_plot
 ```
+
+```{r maptest}
+
+ggplot() +
+  annotation_map_tile(zoomin = 0, progress = "none", type = "stamenbw") +
+  geom_sf(data = wards, color = "blue", alpha = 0.05) +
+  geom_sf(data = neighborhoods, color = "green", alpha = 0.05) +
+  labs(caption = "Map tiles by Stamen Design. Data by OpenStreetMap")
+
+```
+
+## ```{r basemap}
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
