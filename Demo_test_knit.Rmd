@@ -1,5 +1,5 @@
 ---
-title: "Cambridg"
+title: "Cambrid"
 output: html_document
 ---
 
