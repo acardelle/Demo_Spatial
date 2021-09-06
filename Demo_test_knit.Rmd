@@ -1,5 +1,5 @@
 ---
-title: "Cambrid"
+title: "Cambridge Parks and Playgrounds"
 output: html_document
 ---
 
@@ -7,13 +7,8 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## R Markdown
 
-This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
-
-When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
-
-```{r load packages, message=FALSE}
+```{r load packages, message=FALSE, echo=FALSE}
 library(sf)
 library(tidyverse)
 library(ggspatial)
@@ -21,18 +16,16 @@ library(ggthemes)
 library(raster)
 ```
 
-## St_Read Tryout
+##  Tryout
 
-```{r st_read}
+```{r st_read, message=FALSE, echo=FALSE, results='hide'}
 
 wards <- st_read("wards_precincts.geojson")
 neighborhoods <- st_read("BOUNDARY_CDDNeighborhoods.shp.zip")
+
 ```
-##libraries <- st_read("library_locations.xml")
 
 ## Including Plots
-
-You can also embed plots, for example:
 
 ```{r cambridge_plot test, echo=FALSE}
 
@@ -43,7 +36,7 @@ cambridge_plot <- ggplot() +
 
 ```
 
-```{r maptest}
+```{r maptest, echo=FALSE}
 
 ggplot() +
   annotation_map_tile(zoomin = 0, progress = "none", type = "stamenbw") +
@@ -53,4 +46,4 @@ ggplot() +
 
 ```
 
-Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+Produced at the GSD 
