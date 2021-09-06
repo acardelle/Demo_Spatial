@@ -1,5 +1,5 @@
 ---
-title: "Cambridge"
+title: "Cambridg"
 output: html_document
 ---
 
@@ -47,7 +47,7 @@ cambridge_plot <- ggplot() +
 
 ggplot() +
   annotation_map_tile(zoomin = 0, progress = "none", type = "stamenbw") +
-  geom_sf(data = wards, shape = 17, color = "blue", alpha = 0.05) +
+  geom_sf(data = wards, color = "blue", alpha = 0.05) +
   geom_sf(data = neighborhoods, color = "green", alpha = 0.05) +
   labs(caption = "Map tiles by Stamen Design. Data by OpenStreetMap")
 
