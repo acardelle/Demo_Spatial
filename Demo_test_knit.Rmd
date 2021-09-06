@@ -34,7 +34,7 @@ neighborhoods <- st_read("BOUNDARY_CDDNeighborhoods.shp.zip")
 
 You can also embed plots, for example:
 
-```{r plotting test, echo=FALSE}
+```{r cambridge_plot test, echo=FALSE}
 
 cambridge_plot <- ggplot() +
   geom_sf(data = wards, color = "blue") +
@@ -47,12 +47,10 @@ cambridge_plot <- ggplot() +
 
 ggplot() +
   annotation_map_tile(zoomin = 0, progress = "none", type = "stamenbw") +
-  geom_sf(data = wards, color = "blue", alpha = 0.05) +
+  geom_sf(data = wards, shape = 17, color = "blue", alpha = 0.05) +
   geom_sf(data = neighborhoods, color = "green", alpha = 0.05) +
   labs(caption = "Map tiles by Stamen Design. Data by OpenStreetMap")
 
 ```
-
-## ```{r basemap}
 
 Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
