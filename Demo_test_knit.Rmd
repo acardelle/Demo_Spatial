@@ -132,6 +132,6 @@ The main goal of this map was to have an easy-to-read representation. Thus, diff
 
 ## Contribution Statement
 
-Each member of our group made important and different contributions to the final product. Alex collated our code and formatted our draft maps into a GitHub repository for Tuesday’s class. Livesey drafted the introduction statement for our maps. Marina found the data layers (“playgrounds.geojson,” “recreation.kml,” “neighborhoods.kml”) that became the basis of our maps. Lastly, Noah figured out how to include three variables (neighborhoods, parks, and playgrounds) in the legend using the scale_color_manual() and scale_fill_manual() commands. 
+Each member of our group made important and different contributions to the final product. Alex collated our code and formatted our draft maps into a GitHub repository for Tuesday’s class. Livesey drafted the introduction statement for our maps. Marina found the data layers (“playgrounds.geojson,” “recreation.kml,” “neighborhoods.kml”) that became the basis of our maps. Lastly, Noah figured out how to include three variables (neighborhoods, parks, and playgrounds) in the legend using the scale_color_manual() and scale_fill_manual() commands. Therefore, the group allocated each individual member 10 points.
 
-Produced at the GSD 
+Produced at the GSD.
